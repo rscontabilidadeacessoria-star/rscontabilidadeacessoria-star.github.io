@@ -1,1126 +1,1073 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas</title>
-  <meta name="description" content="Marmitas fitness saudáveis, práticas e saborosas, preparadas por nutricionistas. Peça online ou assine semanalmente para uma vida mais leve e nutritiva." />
-  
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png"> <meta property="og:type" content="website">
-  <meta property="og:url" content="URL_DO_SEU_SITE_AQUI"> <meta property="og:title" content="Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas">
-  <meta property="og:description" content="Marmitas fitness práticas e saborosas para sua rotina. Peça online ou assine semanalmente.">
-  <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE_AQUI"> <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="URL_DO_SEU_SITE_AQUI"> <meta name="twitter:title" content="Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas">
-  <meta name="twitter:description" content="Marmitas fitness práticas e saborosas para sua rotina. Peça online ou assine semanalmente.">
-  <meta name="twitter:image" content="URL_DA_IMAGEM_DE_DESTAQUE_AQUI"> <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"></noscript>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <style>
-    /* ------------------------------------------------------------------ */
-    /* ESTILOS GLOBAIS E VARIÁVEIS CSS                                    */
-    /* ------------------------------------------------------------------ */
-    :root{
-      --green-600:#2f9e44;
-      --green-400:#6fcf97;
-      --orange-500:#ff7a18;
-      --bg:#fafafa;
-      --card:#ffffff;
-      --muted:#666666;
-      --radius:12px;
-      --spacing-sm: 8px;
-      --spacing-md: 16px;
-      --spacing-lg: 28px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#f2f2ed);color:#17352b;font-family: 'Poppins', sans-serif; line-height: 1.6;}
-    
-    .container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--spacing-lg);
-    }
-    
-    .button-primary, .button-secondary{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      padding:12px 18px;
-      border-radius:10px;
-      font-weight:700;
-      border:none;
-      cursor:pointer;
-      text-decoration: none;
-      transition: transform 0.2s, background 0.2s, color 0.2s;
-    }
-    .button-primary{
-      background:var(--orange-500);
-      color:white;
-    }
-    .button-primary:hover{
-      transform: translateY(-2px);
-      background: #f06a08;
-    }
-    .button-secondary{
-      background:transparent;
-      border:2px solid var(--green-600);
-      color:var(--green-600);
-    }
-    .button-secondary:hover{
-      transform: translateY(-2px);
-      background: var(--green-600);
-      color:white;
-    }
-    
-    .cart-button{
-      position:relative;
-      background:transparent;
-      border:none;
-      color:var(--green-600);
-      cursor:pointer;
-      font-size:24px;
-      padding:8px;
-      transition: transform 0.2s;
-    }
-    .cart-button:hover {
-      transform: scale(1.1);
-    }
-    .cart-count{
-      position:absolute;
-      top:0;
-      right:0;
-      background:var(--orange-500);
-      color:white;
-      font-size:12px;
-      font-weight:bold;
-      border-radius:50%;
-      width:20px;
-      height:20px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas</title>
+    <meta name="description" content="Marmitas fitness saudáveis, práticas e saborosas, preparadas por nutricionistas. Peça online ou assine semanalmente para uma vida mais leve e nutritiva." />
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> 
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="URL_DO_SEU_SITE_AQUI"> 
+    <meta property="og:title" content="Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas">
+    <meta property="og:description" content="Marmitas fitness práticas e saborosas para sua rotina. Peça online ou assine semanalmente.">
+    <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE_AQUI"> 
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="URL_DO_SEU_SITE_AQUI"> 
+    <meta name="twitter:title" content="Seu Fit Diário — Marmitas Fitness Saudáveis e Saborosas">
+    <meta name="twitter:description" content="Marmitas fitness práticas e saborosas para sua rotina. Peça online ou assine semanalmente.">
+    <meta name="twitter:image" content="URL_DA_IMAGEM_DE_DESTAQUE_AQUI"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"></noscript>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ------------------------------------------------------------------ */
+        /* ESTILOS GLOBAIS E VARIÁVEIS CSS                                    */
+        /* ------------------------------------------------------------------ */
+        :root{
+            --green-600: #2f9e44;
+            --green-400: #6fcf97;
+            --orange-500: #ff7a18;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --muted: #666666;
+            --radius: 12px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 28px;
+            --shadow-light: 0 4px 8px rgba(20,60,30,0.04), 0 8px 16px rgba(20,60,30,0.08);
+            --shadow-hover: 0 6px 12px rgba(20,60,30,0.06), 0 12px 24px rgba(20,60,30,0.12);
+        }
+        * {box-sizing: border-box;}
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, var(--bg), #f2f2ed);
+            color: #17352b;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .button-primary, .button-secondary{
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s, color 0.2s;
+        }
+        .button-primary{
+            background: var(--orange-500);
+            color: white;
+        }
+        .button-primary:hover{
+            transform: translateY(-2px);
+            background: #f06a08;
+        }
+        .button-secondary{
+            background: transparent;
+            border: 2px solid var(--green-600);
+            color: var(--green-600);
+        }
+        .button-secondary:hover{
+            transform: translateY(-2px);
+            background: var(--green-600);
+            color: white;
+        }
+        
+        .cart-button{
+            position: relative;
+            background: transparent;
+            border: none;
+            color: var(--green-600);
+            cursor: pointer;
+            font-size: 24px;
+            padding: 8px;
+            transition: transform 0.2s;
+        }
+        .cart-button:hover {
+            transform: scale(1.1);
+        }
+        .cart-count{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--orange-500);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* ------------------------------------------------------------------ */
-    /* LAYOUT DA PÁGINA                                                   */
-    /* ------------------------------------------------------------------ */
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:20px var(--spacing-lg);
-    }
-    .brand{
-      display:flex;
-      gap:var(--spacing-md);
-      align-items:center;
-    }
-    .brand-logo{
-      width: 100px;
-      height: 100px;
-      border-radius:var(--radius);
-      background-color: var(--card);
-      background-size: 85%;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      /* Adicionado para acessibilidade visual do logo */
-      display: block; 
-      text-indent: -9999px; /* Esconde o texto da marca */
-      overflow: hidden;
-      background-image: url('imagens/logo.png'); /* Movido para CSS para alt text no HTML */
-    }
-    .brand-name{
-      margin:0;
-      font-size:20px;
-    }
-    .brand-slogan{
-      margin:0;
-      font-size:12px;
-      color:var(--muted);
-    }
-    nav{
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-md);
-    }
-    nav a{
-      color:var(--green-600);
-      text-decoration:none;
-      font-weight:600;
-      transition: color 0.2s;
-    }
-    nav a:hover{
-      color:var(--green-400);
-    }
+        /* ------------------------------------------------------------------ */
+        /* LAYOUT DA PÁGINA                                                   */
+        /* ------------------------------------------------------------------ */
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px var(--spacing-lg);
+        }
+        .brand{
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+        .brand-logo{
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius);
+            background-color: var(--card);
+            background-size: 85%;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: block;
+            text-indent: -9999px;
+            overflow: hidden;
+            background-image: url('imagens/logo.png');
+        }
+        .brand-name{
+            margin: 0;
+            font-size: 20px;
+        }
+        .brand-slogan{
+            margin: 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+        nav a{
+            color: var(--green-600);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        nav a:hover{
+            color: var(--green-400);
+        }
 
-    .hero{
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:var(--spacing-lg);
-      align-items:center;
-      padding:36px var(--spacing-lg);
-    }
-    .hero-eyebrow{
-      display:inline-block;
-      background:linear-gradient(90deg,var(--green-600),var(--green-400));
-      color:white;
-      padding:6px 10px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:12px;
-    }
-    .hero-headline{
-      font-size:36px;
-      margin:18px 0 10px;
-      line-height:1.2;
-    }
-    .hero-sub{
-      color:#1f3f2f;
-      margin-bottom:18px;
-    }
-    .button-group{
-      display:flex;
-      gap:12px;
-    }
+        .hero{
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: var(--spacing-lg);
+            align-items: center;
+            padding: 36px var(--spacing-lg);
+        }
+        .hero-eyebrow{
+            display: inline-block;
+            background: linear-gradient(90deg, var(--green-600), var(--green-400));
+            color: white;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        .hero-headline{
+            font-size: 36px;
+            margin: 18px 0 10px;
+            line-height: 1.2;
+        }
+        .hero-sub{
+            color: #1f3f2f;
+            margin-bottom: 18px;
+        }
+        .button-group{
+            display: flex;
+            gap: 12px;
+        }
 
-    .hero-image-card{
-      background:var(--card);
-      padding:var(--spacing-md);
-      border-radius:16px;
-      box-shadow:0 8px 24px rgba(20,60,30,0.08);
-      position: relative; /* Para os pontos do slider */
-    }
-    .pack-image{
-      width:100%;
-      height:260px;
-      border-radius:10px;
-      background-color: #eef8ef;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: background-image 1s ease-in-out;
-      /* Para acessibilidade */
-      display: block;
-    }
-    .slider-controls{
-      display: flex;
-      justify-content: space-between;
-      margin-top: var(--spacing-md);
-      gap: var(--spacing-sm);
-    }
-    .slider-btn{
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--green-600);
-      background: var(--card);
-      color: var(--green-600);
-      font-weight: 600;
-      cursor: pointer;
-      flex: 1;
-      transition: background 0.2s, color 0.2s;
-    }
-    .slider-btn:hover{
-      background: var(--green-600);
-      color: var(--card);
-    }
-    /* Indicadores do slider */
-    .slider-indicators {
-        position: absolute;
-        bottom: 20px; /* Ajuste a posição conforme necessário */
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-        z-index: 10;
-    }
-    .slider-dot {
-        width: 10px;
-        height: 10px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 50%;
-        border: 1px solid var(--green-600);
-        cursor: pointer;
-        transition: background-color 0.3s, border-color 0.3s;
-    }
-    .slider-dot.active {
-        background-color: var(--green-600);
-        border-color: var(--green-600);
-    }
+        .hero-image-card{
+            background: var(--card);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(20,60,30,0.08);
+            position: relative;
+        }
+        .pack-image{
+            width: 100%;
+            height: 260px;
+            border-radius: 10px;
+            background-color: #eef8ef;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1s ease-in-out;
+            display: block;
+        }
+        .slider-controls{
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--spacing-md);
+            gap: var(--spacing-sm);
+        }
+        .slider-btn{
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--green-600);
+            background: var(--card);
+            color: var(--green-600);
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: background 0.2s, color 0.2s;
+        }
+        .slider-btn:hover{
+            background: var(--green-600);
+            color: var(--card);
+        }
+        .slider-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            border: 1px solid var(--green-600);
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .slider-dot.active {
+            background-color: var(--green-600);
+            border-color: var(--green-600);
+        }
 
+        .subscribe{
+            padding: 20px;
+            background: linear-gradient(90deg, #fff, #f7fff8);
+            border-radius: var(--radius);
+            border: 1px dashed #9dd7a9;
+            box-shadow: 0 4px 12px rgba(20,60,30,0.05);
+        }
+        
+        /* ------------------------------------------------------------------ */
+        /* NOVOS ESTILOS PARA OS CARDS DO CARDÁPIO                            */
+        /* ------------------------------------------------------------------ */
+        .cardapio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
 
-    /* NOVO: Estilos do cardápio melhorado */
-    .cardapio-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        padding: 40px 20px;
-        background-color: #f9f9f9;
-    }
-    .prato-card {
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        border: 1px solid #eee;
-        cursor: pointer;
-    }
-    .prato-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-    .prato-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-    .prato-conteudo {
-        padding: 20px;
-    }
-    .prato-conteudo h3 {
-        color: #333;
-        font-size: 22px;
-        margin-top: 0;
-        margin-bottom: 10px;
-        text-align: center;
-        font-weight: 700;
-    }
-    .prato-conteudo p {
-        color: #666;
-        font-size: 14px;
-        line-height: 1.6;
-    }
-    .prato-conteudo ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 15px;
-        border-top: 1px solid #eee;
-        padding-top: 10px;
-    }
-    .prato-conteudo li {
-        color: #444;
-        font-size: 13px;
-        margin-bottom: 5px;
-    }
-    .prato-preco {
-        font-size: 18px;
-        font-weight: 800;
-        color: #2f9e44;
-        text-align: center;
-        margin-top: 15px;
-    }
-    .prato-add-button {
-        display: block;
-        width: 100%;
-        padding: 12px;
-        background: #2f9e44;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        text-align: center;
-        margin-top: 10px;
-        font-weight: bold;
-        position: relative;
-        transition: background 0.2s;
-    }
-    .prato-add-button:hover {
-        background: #6fcf97;
-    }
-    .item-quantity-badge {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background-color: var(--orange-500);
-        color: white;
-        border-radius: 50%;
-        padding: 4px 8px;
-        font-size: 10px;
-        font-weight: bold;
-        line-height: 1;
-        min-width: 20px;
-        text-align: center;
-        display: none;
-    }
+        .prato-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-light);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .prato-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .prato-thumb {
+            width: 100%;
+            height: 160px;
+            background-color: #f0fff2;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+        }
 
+        .prato-content {
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
 
-    .menu-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-      gap:var(--spacing-md);
-    }
-    .card{
-      background:var(--card);
-      padding:12px;
-      border-radius:var(--radius);
-      box-shadow: 0 4px 8px rgba(20,60,30,0.04), 0 8px 16px rgba(20,60,30,0.08);
-      display:flex;
-      flex-direction:column;
-      gap:var(--spacing-sm);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover{
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(20,60,30,0.06), 0 12px 24px rgba(20,60,30,0.12);
-    }
-    .card-thumb{
-      height:120px;
-      border-radius:10px;
-      background-color: #f0fff2;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      /* Para acessibilidade */
-      display: block;
-      text-indent: -9999px; /* Esconde o texto da marca */
-      overflow: hidden;
-    }
-    .card-title{font-weight:800}
-    .card-meta{color:var(--muted);font-size:13px}
-    .card-price{
-      margin-top:auto;
-      font-weight:800;
-    }
-    .card-add-button{
-      margin-top:10px;
-      padding:8px 10px;
-      border-radius:10px;
-      border:none;
-      background:var(--green-600);
-      color:white;
-      cursor:pointer;
-      text-decoration: none;
-      text-align: center;
-      display: block;
-      transition: background 0.2s;
-      position: relative; /* Para o span da quantidade */
-    }
-    .card-add-button:hover{
-      background:var(--green-400);
-    }
+        .prato-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 0 0 4px 0;
+        }
 
-    /* Estilo para a quantidade no botão */
-    .item-quantity-badge {
-      position: absolute;
-      /* Ajuste de posicionamento para o badge */
-      top: 0;
-      right: 0;
-      transform: translate(50%, -50%); /* Centraliza o badge no canto superior direito do botão */
-      background-color: var(--orange-500);
-      color: white;
-      border-radius: 50%;
-      padding: 2px 7px; /* Tamanho do círculo */
-      font-size: 10px;
-      font-weight: bold;
-      line-height: 1; /* Alinha o texto verticalmente */
-      display: none; /* Inicia oculto */
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      min-width: 20px; /* Garante tamanho mínimo para números maiores */
-      text-align: center;
-    }
+        .prato-meta {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        
+        .prato-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--green-600);
+            margin-top: var(--spacing-sm);
+        }
+        
+        .prato-button {
+            display: block;
+            width: 100%;
+            margin-top: auto;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: var(--green-600);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            position: relative;
+        }
+        .prato-button:hover {
+            background: var(--green-400);
+        }
 
+        .item-quantity-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--orange-500);
+            color: white;
+            border-radius: 50%;
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            line-height: 1;
+            min-width: 24px;
+            text-align: center;
+        }
 
-    .subscribe{
-      padding:20px;
-      background:linear-gradient(90deg,#fff,#f7fff8);
-      border-radius:var(--radius);
-      border:1px dashed #9dd7a9;
-      box-shadow: 0 4px 12px rgba(20,60,30,0.05);
-    }
+        /* ------------------------------------------------------------------ */
+        /* MODAL DE PEDIDO (CARRINHO)                                         */
+        /* ------------------------------------------------------------------ */
+        .modal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        .modal-content{
+            background: var(--card);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 500px;
+            animation: fadeIn 0.3s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .modal-content h3{margin:0 0 10px;text-align:center; font-size:18px;}
+        .modal-content .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+        }
+        .modal-content .close:hover{color:#555;}
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.95);}
+            to {opacity: 1; transform: scale(1);}
+        }
 
-    /* ------------------------------------------------------------------ */
-    /* MODAL DE PEDIDO (CARRINHO)                                         */
-    /* ------------------------------------------------------------------ */
-    .modal{
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background:rgba(0,0,0,0.7);
-        display:none;
-        justify-content:center;
-        align-items:center;
-        z-index:100;
-    }
-    .modal-content{
-        background:var(--card);
-        padding:var(--spacing-md);
-        border-radius:var(--radius);
-        width:90%;
-        max-width:500px;
-        animation: fadeIn 0.3s ease-out;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-content h3{margin:0 0 10px;text-align:center; font-size:18px;}
-    .modal-content .close{
-        position:absolute;
-        top:10px;
-        right:10px;
-        font-size:24px;
-        font-weight:bold;
-        cursor:pointer;
-        color:#aaa;
-    }
-    .modal-content .close:hover{color:#555;}
-    @keyframes fadeIn {
-        from {opacity: 0; transform: scale(0.95);}
-        to {opacity: 1; transform: scale(1);}
-    }
+        .cart-container {
+            padding-right: 10px;
+        }
+        .cart-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-title {
+            font-weight: 600;
+            margin: 0;
+        }
+        .cart-item-price {
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .cart-item-quantity {
+            width: 60px;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .cart-total {
+            text-align: right;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .clear-cart-button {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: -10px;
+        }
+        .clear-cart-button:hover {
+            text-decoration: underline;
+        }
+        .remove-item-button {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .address-fields {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 10px;
+            align-items: end;
+        }
+        .address-fields-bottom {
+            grid-column: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr 120px;
+            gap: 10px;
+        }
 
-    .cart-container {
-      padding-right: 10px;
-    }
-    .cart-list {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-md);
-    }
-    .cart-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-    }
-    .cart-item:last-child {
-      border-bottom: none;
-    }
-    .cart-item-info {
-      flex: 1;
-    }
-    .cart-item-title {
-      font-weight: 600;
-      margin: 0;
-    }
-    .cart-item-price {
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .cart-item-quantity {
-      width: 60px;
-      text-align: center;
-      padding: 5px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
-    .cart-total {
-      text-align: right;
-      font-weight: bold;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    .clear-cart-button {
-      background: none;
-      border: none;
-      color: var(--muted);
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: -10px;
-    }
-    .clear-cart-button:hover {
-      text-decoration: underline;
-    }
-    .remove-item-button {
-      background: none;
-      border: none;
-      color: #e74c3c;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    /* Estilos para o grupo de campos de endereço */
-    .address-fields {
-      display: grid;
-      grid-template-columns: 1fr 80px;
-      gap: 10px;
-      align-items: end;
-    }
-    .address-fields-bottom {
-      grid-column: 1 / 3;
-      display: grid;
-      grid-template-columns: 1fr 120px;
-      gap: 10px;
-    }
+        .form-section {
+            margin-top: 20px;
+        }
+        .form-label {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: -5px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: var(--spacing-sm);
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23444" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+        .info-message {
+            text-align: center;
+            font-size: 12px;
+            color: var(--orange-500);
+            margin-top: 0;
+        }
+        
+        /* ------------------------------------------------------------------ */
+        /* RESPONSIVIDADE                                                     */
+        /* ------------------------------------------------------------------ */
+        @media(max-width:900px){
+            .hero{
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+            .hero-image-card{
+                order: -1;
+            }
+            .hero-sub{
+                margin-bottom: var(--spacing-lg);
+            }
+        }
+        @media(max-width: 500px) {
+            .address-fields, .address-fields-bottom {
+                grid-template-columns: 1fr;
+            }
+            .hero-headline {
+                font-size: 30px;
+            }
+            .brand-name {
+                font-size: 18px;
+            }
+        }
+    </style>
 
-
-    .form-section {
-      margin-top: 20px;
-    }
-    .form-label {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: -5px;
-      display: block;
-    }
-    input, select {
-        width:100%;
-        padding:12px;
-        margin-bottom:var(--spacing-sm);
-        border-radius:8px;
-        border:1px solid #ddd;
-    }
-    select {
-        appearance: none;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23444" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-    }
-    .info-message {
-      text-align:center;
-      font-size:12px;
-      color:var(--orange-500);
-      margin-top: 0;
-    }
-    
-    /* ------------------------------------------------------------------ */
-    /* RESPONSIVIDADE                                                     */
-    /* ------------------------------------------------------------------ */
-    @media(max-width:900px){
-      .hero{
-        grid-template-columns:1fr;
-        gap: var(--spacing-lg);
-      }
-      .hero-image-card{
-        order:-1;
-      }
-      .hero-sub{
-        margin-bottom: var(--spacing-lg);
-      }
-    }
-    @media(max-width: 500px) {
-      .address-fields, .address-fields-bottom {
-        grid-template-columns: 1fr;
-      }
-      .hero-headline {
-        font-size: 30px;
-      }
-      .brand-name {
-        font-size: 18px;
-      }
-    }
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Seu Fit Diário",
-      "image": "URL_DA_IMAGEM_DE_DESTAQUE_AQUI", "url": "URL_DO_SEU_SITE_AQUI", "telephone": "+5581994505866",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sua Rua, Seu Número", "addressLocality": "Sua Cidade",
-        "addressRegion": "Seu Estado",
-        "postalCode": "Seu CEP",
-        "addressCountry": "BR"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "17:00"
-        }
-      ],
-      "description": "Marmitas fitness saudáveis, práticas e saborosas, preparadas por nutricionistas. Peça online ou assine semanalmente para uma vida mais leve e nutritiva.",
-      "pricelange": "R$"
-    }
-  </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Seu Fit Diário",
+      "image": "URL_DA_IMAGEM_DE_DESTAQUE_AQUI", 
+      "url": "URL_DO_SEU_SITE_AQUI", 
+      "telephone": "+5581994505866",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sua Rua, Seu Número", 
+        "addressLocality": "Sua Cidade",
+        "addressRegion": "Seu Estado",
+        "postalCode": "Seu CEP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "description": "Marmitas fitness saudáveis, práticas e saborosas, preparadas por nutricionistas. Peça online ou assine semanalmente para uma vida mais leve e nutritiva.",
+      "pricelange": "R$"
+    }
+    </script>
 </head>
 <body>
-  <header class="container">
-    <div class="brand">
-      <a href="#" class="brand-logo" role="img" aria-label="Seu Fit Diário - Logo" style="background-image: url('imagens/logo.png');">Seu Fit Diário</a>
-      <div>
-        <h1 class="brand-name">Seu Fit Diário</h1>
-        <p class="brand-slogan">Nutrição e sabor no seu dia</p>
-      </div>
-    </div>
-    <nav aria-label="Navegação Principal">
-      <a href="#cardapio">Cardápio</a>
-      <a href="#assinatura">Assinatura</a>
-      <a href="#contato">Contato</a>
-      <button class="cart-button" onclick="openCartModal()" aria-label="Abrir carrinho de compras">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count" id="cart-count">0</span>
-      </button>
-    </nav>
-  </header>
+    <header class="container">
+        <div class="brand">
+            <a href="#" class="brand-logo" role="img" aria-label="Seu Fit Diário - Logo" style="background-image: url('imagens/logo.png');">Seu Fit Diário</a>
+            <div>
+                <h1 class="brand-name">Seu Fit Diário</h1>
+                <p class="brand-slogan">Nutrição e sabor no seu dia</p>
+            </div>
+        </div>
+        <nav aria-label="Navegação Principal">
+            <a href="#cardapio">Cardápio</a>
+            <a href="#assinatura">Assinatura</a>
+            <a href="#contato">Contato</a>
+            <button class="cart-button" onclick="openCartModal()" aria-label="Abrir carrinho de compras">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero container">
-      <article class="hero-content">
-        <span class="hero-eyebrow">Marmitas Fitness</span>
-        <h2 class="hero-headline">
-            Comida saudável.<br>
-            Sabor de verdade.<br>
-            Entrega no seu dia a dia.
-        </h2>
-        <p class="hero-sub">Pratos balanceados, porções controladas e opções para todos os objetivos: perda de peso, ganho de massa ou manutenção — pensadas por nutricionistas.</p>
-        <div class="button-group">
-          <button class="button-primary" onclick="document.getElementById('cardapio').scrollIntoView({behavior:'smooth'})">Fazer Pedido</button>
-          <button class="button-secondary" onclick="document.getElementById('assinatura').scrollIntoView({behavior:'smooth'})">Assine e Economize</button>
-        </div>
+    <main>
+        <section class="hero container">
+            <article class="hero-content">
+                <span class="hero-eyebrow">Marmitas Fitness</span>
+                <h2 class="hero-headline">
+                    Comida saudável.<br>
+                    Sabor de verdade.<br>
+                    Entrega no seu dia a dia.
+                </h2>
+                <p class="hero-sub">Pratos balanceados, porções controladas e opções para todos os objetivos: perda de peso, ganho de massa ou manutenção — pensadas por nutricionistas.</p>
+                <div class="button-group">
+                    <button class="button-primary" onclick="document.getElementById('cardapio').scrollIntoView({behavior:'smooth'})">Fazer Pedido</button>
+                    <button class="button-secondary" onclick="document.getElementById('assinatura').scrollIntoView({behavior:'smooth'})">Assine e Economize</button>
+                </div>
 
-        <div class="subscribe" id="assinatura" style="margin-top:22px;">
-          <strong>Assinatura Semanal</strong>
-          <p class="brand-slogan" style="margin:8px 0;">Receba 5 marmitas por semana com 10% de desconto. Cancele quando quiser.</p>
-          <div class="button-group">
-            <a id="whatsapp-assinatura-link" target="_blank" class="button-primary">Assinar Agora</a>
-            <a class="button-secondary" href="#contato">Fale Conosco</a>
-          </div>
-        </div>
-      </article>
+                <div class="subscribe" id="assinatura" style="margin-top:22px;">
+                    <strong>Assinatura Semanal</strong>
+                    <p class="brand-slogan" style="margin:8px 0;">Receba 5 marmitas por semana com 10% de desconto. Cancele quando quiser.</p>
+                    <div class="button-group">
+                        <a id="whatsapp-assinatura-link" target="_blank" class="button-primary">Assinar Agora</a>
+                        <a class="button-secondary" href="#contato">Fale Conosco</a>
+                    </div>
+                </div>
+            </article>
 
-      <aside class="hero-image-card">
-        <div id="hero-slider" class="pack-image" role="img" aria-label="Imagem de destaque de marmita fitness"></div>
-        <div class="slider-controls">
-            <button id="prev-btn" class="slider-btn" aria-label="Marmita anterior">Anterior</button>
-            <button id="next-btn" class="slider-btn" aria-label="Próxima marmita">Próxima</button>
-        </div>
-        <div class="slider-indicators" id="slider-indicators"></div>
-      </aside>
-    </section>
+            <aside class="hero-image-card">
+                <div id="hero-slider" class="pack-image" role="img" aria-label="Imagem de destaque de marmita fitness"></div>
+                <div class="slider-controls">
+                    <button id="prev-btn" class="slider-btn" aria-label="Marmita anterior">Anterior</button>
+                    <button id="next-btn" class="slider-btn" aria-label="Próxima marmita">Próxima</button>
+                </div>
+                <div class="slider-indicators" id="slider-indicators"></div>
+            </aside>
+        </section>
 
-        <section id="cardapio" class="cardapio-container">
+        <section id="cardapio" class="container" style="padding-top: var(--spacing-lg);">
+            <h3>Cardápio</h3>
+            <div class="cardapio-grid" id="menuGrid">
+                
+                <article class="prato-card" data-id="1" data-price="18.50" itemscope itemtype="https://schema.org/Product">
+                    <div class="prato-thumb" style="background-image: url('imagens/frango-arroz.png');" role="img" aria-label="Frango Grelhado com Arroz Integral"></div>
+                    <div class="prato-content">
+                        <h4 class="prato-title" itemprop="name">Frango Grelhado + Arroz Integral</h4>
+                        <p class="prato-meta">360 kcal • Proteína: 32g</p>
+                        <p class="prato-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">R$ <span itemprop="price">18,50</span></p>
+                        <button class="prato-button" data-item-id="1" onclick="addToCart('1')">
+                            Adicionar ao Carrinho
+                            <span class="item-quantity-badge" id="quantity-badge-1">0</span>
+                        </button>
+                    </div>
+                </article>
 
-                <div class="prato-card">
-          <img src="imagens/frango-arroz.png" alt="Frango Grelhado com Arroz Integral">
-          <div class="prato-conteudo">
-            <h3>Frango Grelhado "Força Total"</h3>
-            <p>Uma refeição clássica e poderosa para quem busca **ganho de massa magra** e energia duradoura. Nosso peito de frango suculento e temperado é grelhado na perfeição e servido com arroz integral soltinho e brócolis cozidos no vapor.</p>
-            <ul>
-              <li>**Calorias:** 360 kcal</li>
-              <li>**Proteínas:** 32g</li>
-              <li>**Carboidratos:** 35g</li>
-              <li>**Gorduras:** 8g</li>
-            </ul>
-            <p class="prato-preco">R$ 18,50</p>
-            <button class="prato-add-button" data-item-id="1" onclick="addToCart('1')">
-              Adicionar ao Carrinho
-              <span class="item-quantity-badge" id="quantity-badge-1">0</span>
-            </button>
-          </div>
-        </div>
+                <article class="prato-card" data-id="2" data-price="26.00" itemscope itemtype="https://schema.org/Product">
+                    <div class="prato-thumb" style="background-image: url('imagens/salmao-legumes.png');" role="img" aria-label="Salmão ao Forno com Legumes"></div>
+                    <div class="prato-content">
+                        <h4 class="prato-title" itemprop="name">Salmão ao Forno com Legumes</h4>
+                        <p class="prato-meta">420 kcal • Gord. boas</p>
+                        <p class="prato-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">R$ <span itemprop="price">26,00</span></p>
+                        <button class="prato-button" data-item-id="2" onclick="addToCart('2')">
+                            Adicionar ao Carrinho
+                            <span class="item-quantity-badge" id="quantity-badge-2">0</span>
+                        </button>
+                    </div>
+                </article>
 
-                <div class="prato-card">
-          <img src="imagens/salmao-legumes.png" alt="Salmão ao Forno com Legumes">
-          <div class="prato-conteudo">
-            <h3>Salmão "Ômega Essencial"</h3>
-            <p>Para quem busca uma fonte de gorduras saudáveis e proteínas de alta qualidade. Filé de salmão ao forno, assado com ervas finas e servido com uma mix de legumes frescos no vapor, como cenoura e abobrinha.</p>
-            <ul>
-              <li>**Calorias:** 420 kcal</li>
-              <li>**Proteínas:** 38g</li>
-              <li>**Carboidratos:** 20g</li>
-              <li>**Gorduras:** 25g</li>
-            </ul>
-            <p class="prato-preco">R$ 26,00</p>
-            <button class="prato-add-button" data-item-id="2" onclick="addToCart('2')">
-              Adicionar ao Carrinho
-              <span class="item-quantity-badge" id="quantity-badge-2">0</span>
-            </button>
-          </div>
-        </div>
+                <article class="prato-card" data-id="3" data-price="17.00" itemscope itemtype="https://schema.org/Product">
+                    <div class="prato-thumb" style="background-image: url('imagens/bowl-veg.png');" role="img" aria-label="Bowl Vegano com Grão-de-bico e Quinoa"></div>
+                    <div class="prato-content">
+                        <h4 class="prato-title" itemprop="name">Bowl Veg: Grão-de-bico e Quinoa</h4>
+                        <p class="prato-meta">400 kcal • Vegano</p>
+                        <p class="prato-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">R$ <span itemprop="price">17,00</span></p>
+                        <button class="prato-button" data-item-id="3" onclick="addToCart('3')">
+                            Adicionar ao Carrinho
+                            <span class="item-quantity-badge" id="quantity-badge-3">0</span>
+                        </button>
+                    </div>
+                </article>
 
-                <div class="prato-card">
-          <img src="imagens/bowl-veg.png" alt="Bowl Vegano de Grão-de-bico">
-          <div class="prato-conteudo">
-            <h3>Bowl Vegano "Leveza e Nutrição"</h3>
-            <p>Um bowl colorido e cheio de sabor, perfeito para uma alimentação leve e rica em nutrientes. Combina grão-de-bico, quinoa, abacate, tomatinhos e folhas frescas. 100% à base de plantas.</p>
-            <ul>
-              <li>**Calorias:** 400 kcal</li>
-              <li>**Proteínas:** 18g</li>
-              <li>**Carboidratos:** 45g</li>
-              <li>**Gorduras:** 12g</li>
-            </ul>
-            <p class="prato-preco">R$ 17,00</p>
-            <button class="prato-add-button" data-item-id="3" onclick="addToCart('3')">
-              Adicionar ao Carrinho
-              <span class="item-quantity-badge" id="quantity-badge-3">0</span>
-            </button>
-          </div>
-        </div>
+                <article class="prato-card" data-id="4" data-price="22.00" itemscope itemtype="https://schema.org/Product">
+                    <div class="prato-thumb" style="background-image: url('imagens/carne-magra.png');" role="img" aria-label="Carne Magra com Purê de Batata Doce"></div>
+                    <div class="prato-content">
+                        <h4 class="prato-title" itemprop="name">Carne Magra + Purê de Batata Doce</h4>
+                        <p class="prato-meta">480 kcal • Energética</p>
+                        <p class="prato-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">R$ <span itemprop="price">22,00</span></p>
+                        <button class="prato-button" data-item-id="4" onclick="addToCart('4')">
+                            Adicionar ao Carrinho
+                            <span class="item-quantity-badge" id="quantity-badge-4">0</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-                <div class="prato-card">
-          <img src="imagens/carne-magra.png" alt="Carne Magra com Purê de Batata Doce">
-          <div class="prato-conteudo">
-            <h3>Carne Magra "Energia Essencial"</h3>
-            <p>Carne magra desfiada com purê cremoso de batata doce e um mix de legumes. Uma opção energética e saborosa, perfeita para o pós-treino.</p>
-            <ul>
-              <li>**Calorias:** 480 kcal</li>
-              <li>**Proteínas:** 45g</li>
-              <li>**Carboidratos:** 30g</li>
-              <li>**Gorduras:** 18g</li>
-            </ul>
-            <p class="prato-preco">R$ 22,00</p>
-            <button class="prato-add-button" data-item-id="4" onclick="addToCart('4')">
-              Adicionar ao Carrinho
-              <span class="item-quantity-badge" id="quantity-badge-4">0</span>
-            </button>
-          </div>
-        </div>
-    </section>
+        <section id="contato" class="container" style="padding-top: var(--spacing-lg); padding-bottom: 80px;">
+            <h3>Contato</h3>
+            <p class="card-meta">Nosso canal de atendimento é o WhatsApp! Se tiver dúvidas ou quiser fazer um pedido, é só chamar. Estamos prontos para te ajudar.</p>
+            <p>WhatsApp: <a id="whatsapp-contato-link" target="_blank">(81) 99450-5866</a></p>
+            <p>Siga-nos: <a href="https://instagram.com/seufitdiario" target="_blank" rel="noopener noreferrer">@seufitdiario</a> (Instagram)</p>
+        </section>
+    </main>
 
+    <footer class="container">
+        <div style="color:var(--muted)">© Seu Fit Diário — Todos os direitos reservados</div>
+        <div style="color:var(--muted)">Desenvolvido por Você • Template pronto</div>
+    </footer>
 
-    <section id="contato" class="container" style="padding-top: var(--spacing-lg); padding-bottom: 80px;">
-      <h3>Contato</h3>
-      <p class="card-meta">Nosso canal de atendimento é o WhatsApp! Se tiver dúvidas ou quiser fazer um pedido, é só chamar. Estamos prontos para te ajudar.</p>
-      <p>WhatsApp: <a id="whatsapp-contato-link" target="_blank">(81) 99450-5866</a></p>
-      <p>Siga-nos: <a href="https://instagram.com/seufitdiario" target="_blank" rel="noopener noreferrer">@seufitdiario</a> (Instagram)</p>
-    </section>
-  </main>
+    <div id="cartModal" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+            <span class="close" onclick="closeCartModal()" aria-label="Fechar carrinho">&times;</span>
+            
+            <h3 id="cart-modal-title">Seu Carrinho</h3>
+            <button class="clear-cart-button" onclick="clearCart()">Esvaziar Carrinho</button>
 
-  <footer class="container">
-    <div style="color:var(--muted)">© Seu Fit Diário — Todos os direitos reservados</div>
-    <div style="color:var(--muted)">Desenvolvido por Você • Template pronto</div>
-  </footer>
+            <div class="cart-container">
+                <ul id="cart-list" class="cart-list" aria-live="polite"></ul>
+            </div>
 
-  <div id="cartModal" class="modal">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
-      <span class="close" onclick="closeCartModal()" aria-label="Fechar carrinho">&times;</span>
-      
-      <h3 id="cart-modal-title">Seu Carrinho</h3>
-      <button class="clear-cart-button" onclick="clearCart()">Esvaziar Carrinho</button>
+            <p class="cart-total">Total: <span id="cart-total-price">R$ 0,00</span></p>
 
-      <div class="cart-container">
-        <ul id="cart-list" class="cart-list" aria-live="polite">
-          </ul>
-      </div>
+            <form id="orderForm" class="form-section">
+                <label for="deliveryOption" class="form-label">Opção de recebimento:</label>
+                <select id="deliveryOption" onchange="toggleAddress()" aria-required="true">
+                    <option value="Entrega">Entrega</option>
+                    <option value="Retirada">Retirada</option>
+                </select>
 
-      <p class="cart-total">Total: <span id="cart-total-price">R$ 0,00</span></p>
+                <div id="addressSection">
+                    <p class="info-message">
+                        *O valor da entrega não está incluso.
+                    </p>
+                    <label for="street" class="form-label">Logradouro:</label>
+                    <input type="text" id="street" placeholder="Rua, Av., etc" required aria-required="true">
 
-      <form id="orderForm" class="form-section">
-        <label for="deliveryOption" class="form-label">Opção de recebimento:</label>
-        <select id="deliveryOption" onchange="toggleAddress()" aria-required="true">
-            <option value="Entrega">Entrega</option>
-            <option value="Retirada">Retirada</option>
-        </select>
+                    <div class="address-fields">
+                        <div>
+                            <label for="number" class="form-label">Número:</label>
+                            <input type="text" id="number" placeholder="123" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="neighborhood" class="form-label">Bairro:</label>
+                            <input type="text" id="neighborhood" placeholder="Seu Bairro" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <div class="address-fields-bottom">
+                        <div>
+                            <label for="city" class="form-label">Cidade:</label>
+                            <input type="text" id="city" placeholder="Sua Cidade" required aria-required="true">
+                        </div>
+                        <div>
+                            <label for="zipCode" class="form-label">CEP:</label>
+                            <input type="text" id="zipCode" placeholder="00000-000" required aria-required="true">
+                        </div>
+                    </div>
+                    
+                    <label for="complement" class="form-label">Complemento:</label>
+                    <input type="text" id="complement" placeholder="Ex: Apartamento 401" required aria-required="true">
+                    
+                    <label for="referencePoint" class="form-label">Ponto de referência:</label>
+                    <input type="text" id="referencePoint" placeholder="Ex: Próximo à padaria central" required aria-required="true">
+                    
+                </div>
 
-        <div id="addressSection">
-            <p class="info-message">
-                *O valor da entrega não está incluso.
-            </p>
-            <label for="street" class="form-label">Logradouro:</label>
-            <input type="text" id="street" placeholder="Rua, Av., etc" required aria-required="true">
+                <label for="paymentOption" class="form-label">Forma de pagamento:</label>
+                <select id="paymentOption" aria-required="true">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão">Cartão</option>
+                </select>
+                
+                <input type="text" id="clientName" placeholder="Seu nome completo" required aria-required="true">
+                <input type="tel" id="clientPhone" placeholder="Seu WhatsApp (com DDD)" required aria-required="true">
+                <button type="submit" class="button-primary" style="margin-top: 15px;">Finalizar Pedido</button>
+            </form>
+        </div>
+    </div>
 
-            <div class="address-fields">
-              <div>
-                <label for="number" class="form-label">Número:</label>
-                <input type="text" id="number" placeholder="123" required aria-required="true">
-              </div>
-              <div>
-                <label for="neighborhood" class="form-label">Bairro:</label>
-                <input type="text" id="neighborhood" placeholder="Seu Bairro" required aria-required="true">
-              </div>
-            </div>
-            
-            <div class="address-fields-bottom">
-              <div>
-                <label for="city" class="form-label">Cidade:</label>
-                <input type="text" id="city" placeholder="Sua Cidade" required aria-required="true">
-              </div>
-              <div>
-                <label for="zipCode" class="form-label">CEP:</label>
-                <input type="text" id="zipCode" placeholder="00000-000" required aria-required="true">
-              </div>
-            </div>
-            
-            <label for="complement" class="form-label">Complemento:</label>
-            <input type="text" id="complement" placeholder="Ex: Apartamento 401" required aria-required="true">
-            
-            <label for="referencePoint" class="form-label">Ponto de referência:</label>
-            <input type="text" id="referencePoint" placeholder="Ex: Próximo à padaria central" required aria-required="true">
-            
-        </div>
+    <div id="confirmationMessage" class="modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="confirmation-modal-title">
+            <h3 id="confirmation-modal-title">Pedido Enviado!</h3>
+            <p style="text-align:center;">Seu pedido foi enviado para o WhatsApp. Em breve entraremos em contato para finalizar a compra.</p>
+            <button class="button-primary" style="width:100%;" onclick="closeConfirmation()">Ok</button>
+        </div>
+    </div>
 
-        <label for="paymentOption" class="form-label">Forma de pagamento:</label>
-        <select id="paymentOption" aria-required="true">
-            <option value="Dinheiro">Dinheiro</option>
-            <option value="Pix">Pix</option>
-            <option value="Cartão">Cartão</option>
-        </select>
-        
-        <input type="text" id="clientName" placeholder="Seu nome completo" required aria-required="true">
-        <input type="tel" id="clientPhone" placeholder="Seu WhatsApp (com DDD)" required aria-required="true">
-        <button type="submit" class="button-primary" style="margin-top: 15px;">Finalizar Pedido</button>
-      </form>
-    </div>
-  </div>
+    <script>
+        // ------------------------------------------------------------------
+        // FUNÇÕES JAVASCRIPT                                                 
+        // ------------------------------------------------------------------
+        const WHATSAPP_NUMBER = '5581994505866'; // CENTRALIZADO AQUI!
 
-  <div id="confirmationMessage" class="modal">
-      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="confirmation-modal-title">
-          <h3 id="confirmation-modal-title">Pedido Enviado!</h3>
-          <p style="text-align:center;">Seu pedido foi enviado para o WhatsApp. Em breve entraremos em contato para finalizar a compra.</p>
-          <button class="button-primary" style="width:100%;" onclick="closeConfirmation()">Ok</button>
-      </div>
-  </div>
+        const heroSlider = document.getElementById('hero-slider');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const sliderIndicators = document.getElementById('slider-indicators');
+        const orderForm = document.getElementById('orderForm');
+        
+        const cart = []; // Array para armazenar os itens do carrinho
 
-  <script>
-    // ------------------------------------------------------------------
-    // FUNÇÕES JAVASCRIPT                                                 
-    // ------------------------------------------------------------------
-    const WHATSAPP_NUMBER = '5581994505866'; // CENTRALIZADO AQUI!
+        const heroImages = [
+            { src: 'imagens/frango-arroz.png', alt: 'Marmita de Frango Grelhado com Arroz Integral' },
+            { src: 'imagens/salmao-legumes.png', alt: 'Marmita de Salmão ao Forno com Legumes' },
+            { src: 'imagens/bowl-veg.png', alt: 'Bowl Vegano de Grão-de-bico e Quinoa' },
+            { src: 'imagens/carne-magra.png', alt: 'Marmita de Carne Magra com Purê de Batata Doce' }
+        ];
+        let currentIndex = 0;
 
-    const heroSlider = document.getElementById('hero-slider');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const sliderIndicators = document.getElementById('slider-indicators');
-    const orderForm = document.getElementById('orderForm');
-    
-    const cart = []; // Array para armazenar os itens do carrinho
+        // Função para atualizar a imagem e os indicadores do slider
+        function updateHeroImage() {
+            heroSlider.style.backgroundImage = `url('${heroImages[currentIndex].src}')`;
+            heroSlider.setAttribute('aria-label', heroImages[currentIndex].alt);
+            updateSliderIndicators();
+        }
 
-    const heroImages = [
-      { src: 'imagens/frango-arroz.png', alt: 'Marmita de Frango Grelhado com Arroz Integral' },
-      { src: 'imagens/salmao-legumes.png', alt: 'Marmita de Salmão ao Forno com Legumes' },
-      { src: 'imagens/bowl-veg.png', alt: 'Bowl Vegano de Grão-de-bico e Quinoa' },
-      { src: 'imagens/carne-magra.png', alt: 'Marmita de Carne Magra com Purê de Batata Doce' }
-    ];
-    let currentIndex = 0;
+        // Cria e atualiza os indicadores do slider (bolinhas)
+        function createSliderIndicators() {
+            sliderIndicators.innerHTML = '';
+            heroImages.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('slider-dot');
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateHeroImage();
+                });
+                sliderIndicators.appendChild(dot);
+            });
+        }
 
-    // Função para atualizar a imagem e os indicadores do slider
-    function updateHeroImage() {
-        heroSlider.style.backgroundImage = `url('${heroImages[currentIndex].src}')`;
-        heroSlider.setAttribute('aria-label', heroImages[currentIndex].alt); // Atualiza aria-label
-        updateSliderIndicators();
-    }
+        // Atualiza o estado ativo dos indicadores
+        function updateSliderIndicators() {
+            const dots = sliderIndicators.querySelectorAll('.slider-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
 
-    // Cria e atualiza os indicadores do slider (bolinhas)
-    function createSliderIndicators() {
-        sliderIndicators.innerHTML = ''; // Limpa antes de criar
-        heroImages.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.classList.add('slider-dot');
-            if (index === currentIndex) {
-                dot.classList.add('active');
-            }
-            dot.addEventListener('click', () => {
-                currentIndex = index;
-                updateHeroImage();
-            });
-            sliderIndicators.appendChild(dot);
-        });
-    }
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + heroImages.length) % heroImages.length;
+            updateHeroImage();
+        });
 
-    // Atualiza o estado ativo dos indicadores
-    function updateSliderIndicators() {
-        const dots = sliderIndicators.querySelectorAll('.slider-dot');
-        dots.forEach((dot, index) => {
-            if (index === currentIndex) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
-    }
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % heroImages.length;
+            updateHeroImage();
+        });
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + heroImages.length) % heroImages.length;
-        updateHeroImage();
-    });
+        // Adiciona um item ao carrinho
+        function addToCart(itemId) {
+            const card = document.querySelector(`.prato-card[data-id="${itemId}"]`);
+            const itemName = card.querySelector('.prato-title').innerText;
+            const itemPrice = parseFloat(card.dataset.price);
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % heroImages.length;
-        updateHeroImage();
-    });
+            const existingItem = cart.find(item => item.id === itemId);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id: itemId,
+                    name: itemName,
+                    price: itemPrice,
+                    quantity: 1
+                });
+            }
+            updateCartCount();
+            updateItemQuantityBadge(itemId);
+        }
 
-    // Adiciona um item ao carrinho
-    function addToCart(itemId) {
-      const card = document.querySelector(`.prato-card[data-item-id="${itemId}"]`);
-      const itemName = card.querySelector('h3').innerText;
-      const itemPrice = parseFloat(card.querySelector('.prato-preco').innerText.replace('R$ ', '').replace(',', '.'));
+        // Atualiza o contador do carrinho no cabeçalho
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').innerText = totalItems;
+        }
 
-      const existingItem = cart.find(item => item.id === itemId);
-      
-      if (existingItem) {
-        existingItem.quantity++;
-      } else {
-        cart.push({
-          id: itemId,
-          name: itemName,
-          price: itemPrice,
-          quantity: 1
-        });
-      }
-      updateCartCount();
-      updateItemQuantityBadge(itemId); // Atualiza o badge de quantidade no botão
-    }
-
-    // Atualiza o contador do carrinho no cabeçalho
-    function updateCartCount() {
-      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-      document.getElementById('cart-count').innerText = totalItems;
-    }
-
-    // Atualiza o badge de quantidade em cada botão do cardápio
-    function updateAllItemQuantityBadges() {
-        document.querySelectorAll('.prato-add-button').forEach(button => {
-            const itemId = button.dataset.itemId;
-            updateItemQuantityBadge(itemId);
-        });
-    }
-    function updateItemQuantityBadge(itemId) {
-        const item = cart.find(item => item.id === itemId);
-        const badge = document.getElementById(`quantity-badge-${itemId}`);
-        if (badge) {
-            if (item && item.quantity > 0) {
-                badge.innerText = item.quantity;
-                badge.style.display = 'block';
-            } else {
-                badge.style.display = 'none';
-            }
-        }
-    }
+        // Atualiza o badge de quantidade em cada botão do cardápio
+        function updateAllItemQuantityBadges() {
+            document.querySelectorAll('.prato-button').forEach(button => {
+                const itemId = button.dataset.itemId;
+                updateItemQuantityBadge(itemId);
+            });
+        }
+        
+        function updateItemQuantityBadge(itemId) {
+            const badge = document.getElementById(`quantity-badge-${itemId}`);
+            const itemInCart = cart.find(item => item.id === itemId);
+            if (itemInCart) {
+                badge.innerText = itemInCart.quantity;
+                badge.style.display = 'block';
+            } else {
+                badge.style.display = 'none';
+            }
+        }
 
 
-    // Funções do Modal (Carrinho)
-    const cartModal = document.getElementById('cartModal');
-    const cartList = document.getElementById('cart-list');
-    const cartTotal = document.getElementById('cart-total-price');
+        // Abre o modal do carrinho
+        function openCartModal() {
+            renderCartItems();
+            document.getElementById('cartModal').style.display = 'flex';
+        }
 
-    function updateCartModal() {
-      cartList.innerHTML = '';
-      let total = 0;
-      
-      cart.forEach(item => {
-        const li = document.createElement('li');
-        li.classList.add('cart-item');
-        li.innerHTML = `
-          <div class="cart-item-info">
-            <p class="cart-item-title">${item.name}</p>
-            <p class="cart-item-price">R$ ${item.price.toFixed(2).replace('.', ',')}</p>
-          </div>
-          <input type="number" class="cart-item-quantity" value="${item.quantity}" min="1" onchange="updateItemQuantity('${item.id}', this.value)">
-          <button class="remove-item-button" onclick="removeItem('${item.id}')">&times;</button>
-        `;
-        cartList.appendChild(li);
-        total += item.price * item.quantity;
-      });
+        // Fecha o modal do carrinho
+        function closeCartModal() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
 
-      cartTotal.innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
-    }
+        // Renderiza os itens na lista do carrinho
+        function renderCartItems() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            let total = 0;
 
-    function updateItemQuantity(itemId, quantity) {
-      const item = cart.find(i => i.id === itemId);
-      if (item) {
-        item.quantity = parseInt(quantity);
-        if (item.quantity <= 0) {
-          removeItem(itemId);
-        }
-      }
-      updateCartCount();
-      updateCartModal();
-      updateItemQuantityBadge(itemId);
-    }
+            if (cart.length === 0) {
+                cartList.innerHTML = '<p style="text-align:center; color: var(--muted);">Seu carrinho está vazio.</p>';
+            } else {
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    const li = document.createElement('li');
+                    li.classList.add('cart-item');
+                    li.innerHTML = `
+                        <div class="cart-item-info">
+                            <p class="cart-item-title">${item.name}</p>
+                            <p class="cart-item-price">R$ ${item.price.toFixed(2).replace('.', ',')}</p>
+                        </div>
+                        <input type="number" class="cart-item-quantity" value="${item.quantity}" min="1" data-item-id="${item.id}" onchange="updateCartQuantity(this)">
+                        <button class="remove-item-button" onclick="removeFromCart('${item.id}')" aria-label="Remover item">&times;</button>
+                    `;
+                    cartList.appendChild(li);
+                });
+            }
+            document.getElementById('cart-total-price').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+        
+        // Atualiza a quantidade de um item no carrinho
+        function updateCartQuantity(input) {
+            const itemId = input.dataset.itemId;
+            const newQuantity = parseInt(input.value);
+            const item = cart.find(i => i.id === itemId);
+            
+            if (item && newQuantity > 0) {
+                item.quantity = newQuantity;
+            } else if (newQuantity <= 0) {
+                removeFromCart(itemId);
+            }
+            renderCartItems();
+            updateCartCount();
+            updateItemQuantityBadge(itemId);
+        }
 
-    function removeItem(itemId) {
-      const index = cart.findIndex(i => i.id === itemId);
-      if (index > -1) {
-        cart.splice(index, 1);
-      }
-      updateCartCount();
-      updateCartModal();
-      updateItemQuantityBadge(itemId);
-    }
+        // Remove um item do carrinho
+        function removeFromCart(itemId) {
+            const itemIndex = cart.findIndex(item => item.id === itemId);
+            if (itemIndex > -1) {
+                cart.splice(itemIndex, 1);
+            }
+            renderCartItems();
+            updateCartCount();
+            updateItemQuantityBadge(itemId);
+        }
 
-    function clearCart() {
-      cart.length = 0; // Limpa o array
-      updateCartCount();
-      updateCartModal();
-      updateAllItemQuantityBadges();
-    }
+        // Limpa o carrinho
+        function clearCart() {
+            cart.length = 0;
+            renderCartItems();
+            updateCartCount();
+            updateAllItemQuantityBadges();
+        }
 
-    function openCartModal() {
-      updateCartModal();
-      cartModal.style.display = 'flex';
-    }
-    function closeCartModal() {
-      cartModal.style.display = 'none';
-    }
+        // Alterna a exibição dos campos de endereço
+        function toggleAddress() {
+            const deliveryOption = document.getElementById('deliveryOption').value;
+            const addressSection = document.getElementById('addressSection');
+            if (deliveryOption === 'Retirada') {
+                addressSection.style.display = 'none';
+            } else {
+                addressSection.style.display = 'block';
+            }
+        }
 
-    const confirmationModal = document.getElementById('confirmationMessage');
-    function closeConfirmation() {
-      confirmationModal.style.display = 'none';
-      clearCart();
-      closeCartModal();
-    }
+        // Lida com o envio do formulário
+        orderForm.addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    function toggleAddress() {
-      const deliveryOption = document.getElementById('deliveryOption').value;
-      const addressSection = document.getElementById('addressSection');
-      if (deliveryOption === 'Entrega') {
-        addressSection.style.display = 'block';
-      } else {
-        addressSection.style.display = 'none';
-      }
-    }
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio. Adicione itens antes de finalizar o pedido.');
+                return;
+            }
 
-    function formatOrderMessage() {
-      const clientName = document.getElementById('clientName').value;
-      const clientPhone = document.getElementById('clientPhone').value;
-      const deliveryOption = document.getElementById('deliveryOption').value;
-      const paymentOption = document.getElementById('paymentOption').value;
+            const deliveryOption = document.getElementById('deliveryOption').value;
+            const paymentOption = document.getElementById('paymentOption').value;
+            const clientName = document.getElementById('clientName').value;
+            const clientPhone = document.getElementById('clientPhone').value;
 
-      let message = `Olá, gostaria de fazer um pedido de marmitas!\n\n`;
-      message += `*Resumo do Pedido:*\n`;
-      let total = 0;
-      cart.forEach(item => {
-        message += ` - ${item.quantity}x ${item.name} (R$ ${item.price.toFixed(2).replace('.', ',')})\n`;
-        total += item.price * item.quantity;
-      });
-      message += `\n*Total:* R$ ${total.toFixed(2).replace('.', ',')}\n`;
+            let message = `Olá, gostaria de fazer um pedido!\n\n`;
+            message += `*Pedido*:\n`;
+            cart.forEach(item => {
+                message += `${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}\n`;
+            });
 
-      message += `\n*Dados do Cliente:*\n`;
-      message += ` - Nome: ${clientName}\n`;
-      message += ` - Telefone: ${clientPhone}\n`;
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            message += `\n*Total*: R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
+            message += `*Recebimento*: ${deliveryOption}\n`;
 
-      message += `\n*Opções de Pagamento e Recebimento:*\n`;
-      message += ` - Opção de recebimento: ${deliveryOption}\n`;
-      message += ` - Forma de pagamento: ${paymentOption}\n`;
+            if (deliveryOption === 'Entrega') {
+                const street = document.getElementById('street').value;
+                const number = document.getElementById('number').value;
+                const neighborhood = document.getElementById('neighborhood').value;
+                const city = document.getElementById('city').value;
+                const zipCode = document.getElementById('zipCode').value;
+                const complement = document.getElementById('complement').value;
+                const referencePoint = document.getElementById('referencePoint').value;
+                message += `*Endereço*: ${street}, ${number} - ${neighborhood}, ${city}, CEP: ${zipCode}\n`;
+                if (complement) {
+                    message += `*Complemento*: ${complement}\n`;
+                }
+                if (referencePoint) {
+                    message += `*Ponto de Referência*: ${referencePoint}\n`;
+                }
+            }
 
-      if (deliveryOption === 'Entrega') {
-        const street = document.getElementById('street').value;
-        const number = document.getElementById('number').value;
-        const neighborhood = document.getElementById('neighborhood').value;
-        const city = document.getElementById('city').value;
-        const zipCode = document.getElementById('zipCode').value;
-        const complement = document.getElementById('complement').value;
-        const referencePoint = document.getElementById('referencePoint').value;
-        message += ` - Endereço: ${street}, ${number} - ${neighborhood}, ${city} - CEP ${zipCode}\n`;
-        if (complement) message += ` - Complemento: ${complement}\n`;
-        if (referencePoint) message += ` - Ponto de Referência: ${referencePoint}\n`;
-      }
+            message += `\n*Pagamento*: ${paymentOption}\n`;
+            message += `*Nome*: ${clientName}\n`;
+            message += `*Telefone*: ${clientPhone}\n`;
 
-      return encodeURIComponent(message);
-    }
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Abre o modal de confirmação e limpa o carrinho
+            showConfirmation();
+            clearCart();
+        });
+        
+        // Funções para os modais de confirmação
+        function showConfirmation() {
+            document.getElementById('cartModal').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'flex';
+        }
 
-    orderForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${formatOrderMessage()}`;
-      window.open(whatsappUrl, '_blank');
-      confirmationModal.style.display = 'flex';
-    });
+        function closeConfirmation() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+        }
+
+        // Define os links do WhatsApp
+        function setWhatsappLinks() {
+            const linkAssinatura = document.getElementById('whatsapp-assinatura-link');
+            const linkContato = document.getElementById('whatsapp-contato-link');
+            
+            const messageAssinatura = 'Olá! Tenho interesse em assinar o plano semanal de marmitas.';
+            const messageContato = 'Olá! Gostaria de fazer um orçamento ou tirar uma dúvida.';
+            
+            linkAssinatura.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageAssinatura)}`;
+            linkContato.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageContato)}`;
+        }
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-      updateHeroImage();
-      createSliderIndicators();
-    });
-  </script>
-
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            updateHeroImage();
+            createSliderIndicators();
+            toggleAddress();
+            setWhatsappLinks();
+        });
+    </script>
 </body>
 </html>
